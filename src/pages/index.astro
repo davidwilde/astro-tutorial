@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Greeting from "../components/Greeting";
+const pageTitle = "Home Page";
+---
+<BaseLayout pageTitle={pageTitle}>
+    <h2 class="font-bold">My awesome blog subtitle</h2>
+    <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+    <div id="tabs" hx-get="/tabs/tab1" hx-trigger="load delay:100ms" hx-target="#tabs" hx-swap="innerHTML" />
+</BaseLayout>

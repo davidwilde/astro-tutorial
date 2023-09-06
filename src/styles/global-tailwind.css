@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-2xl font-bold text-gray-900;
+        color: red;
+    }
+
+    [aria-hidden='true'] {
+        display: none;
+    }
+
+    [role='tablist'] {
+        @apply flex flex-col sm:flex-row shadow-black;
+    }
+
+    [role='tab'] {
+        @apply border-b-2 border-gray-600 text-gray-600 p-3;
+    }
+    
+    [role='tab'][aria-selected='true'] {
+        @apply border-indigo-500 text-indigo-600;
+    }
+
+    [role='tabpanel'] {
+        @apply p-3;
+    }
+}
